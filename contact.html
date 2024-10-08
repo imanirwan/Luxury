@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Shop - Contact Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #FFD700;
+            font-size: 36px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #FFD700;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 50px;
+            text-align: center;
+            background-color: #222;
+        }
+
+        .contact h2 {
+            color: #FFD700;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .contact p {
+            font-size: 18px;
+            width: 80%;
+            margin: 0 auto;
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            text-align: left;
+            width: 50%;
+            margin: 30px auto;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .contact-info p strong {
+            color: #FFD700;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            margin-top: 30px;
+            width: 50%;
+            margin: 0 auto;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            background-color: #444;
+            color: #fff;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #FFD700;
+            color: #111;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #e6c200;
+        }
+
+        footer {
+            background-color: #222;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Luxury Shop</h1>
+        <nav>
+            <a href="header.html">Home</a>
+            <a href="tambah_produk.html">Products</a>
+            <a href="about us.html">About Us</a>
+            <a href="checkout.html">Cart</a>
+
+                </nav>
+    </header>
+
+    <!-- Contact Us Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>
+            We would love to hear from you! Whether you have a question about our products, feedback on your shopping experience, or any other inquiries, feel free to reach out to us through the form below or via our contact details.
+        </p>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <p><strong>Address:</strong> 123 Luxury Street, Beverly Hills, CA</p>
+            <p><strong>Email:</strong> support@luxuryshop.com</p>
+            <p><strong>Phone:</strong> +1 234 567 890</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <form action="submit_contact.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Luxury Shop. All Rights Reserved. <a href="contact.html">Contact Us</a></p>
+    </footer>
+
+</body>
+</html>

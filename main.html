@@ -1,0 +1,159 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #FFD700;
+            font-size: 36px;
+            letter-spacing: 3px;
+        }
+
+        header nav {
+            margin-top: 15px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #FFD700;
+        }
+
+        /* Dashboard Styles */
+        .dashboard-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .dashboard-title {
+            font-size: 32px;
+            color: #FFD700;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-actions {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .dashboard-actions button {
+            background-color: #FFD700;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #111;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            width: 30%;
+        }
+
+        .dashboard-actions button:hover {
+            background-color: #ffda55;
+        }
+
+        .welcome-message {
+            font-size: 24px;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .dashboard-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .dashboard-actions button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>User Dashboard</h1>
+        <nav>
+            <a href="header.html">Home</a>
+            <a href="tambah_produk.html">Products</a>
+            <a href="about_us.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Dashboard Section -->
+    <div class="dashboard-container">
+        <h2 class="dashboard-title">Welcome, User!</h2>
+        <p class="welcome-message">You have successfully logged in. What would you like to do next?</p>
+
+        <div class="dashboard-actions">
+            <button onclick="window.location.href='checkout.html'">View Cart</button>
+            <button onclick="window.location.href='tambah_produk.html'">Add Product</button>
+            <button onclick="window.location.href='header.html'">Logout</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Luxury Shop. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+</body>
+</html>

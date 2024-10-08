@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #FFD700;
+            font-size: 36px;
+            letter-spacing: 3px;
+        }
+
+        header nav {
+            margin-top: 15px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #FFD700;
+        }
+
+        /* Cart Container */
+        .cart-container {
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cart-title {
+            font-size: 36px;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            align-items: center;
+        }
+
+        .cart-item img {
+            width: 100px;
+            border-radius: 10px;
+        }
+
+        .item-details {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+
+        .item-details h3 {
+            font-size: 24px;
+            color: #FFD700;
+        }
+
+        .item-details p {
+            font-size: 18px;
+            color: #ddd;
+        }
+
+        .item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .item-quantity input {
+            width: 50px;
+            padding: 5px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .item-quantity button {
+            background-color: #FFD700;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            color: #111;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .item-quantity button:hover {
+            background-color: #ffda55;
+        }
+
+        .item-total-price {
+            font-size: 20px;
+            color: #FFD700;
+        }
+
+        .remove-button {
+            background-color: #ff4444;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .remove-button:hover {
+            background-color: #ff7777;
+        }
+
+        /* Checkout Section */
+        .checkout-section {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+        }
+
+        .total-price {
+            font-size: 24px;
+            color: #FFD700;
+        }
+
+        .checkout-button {
+            background-color: #FFD700;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #111;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkout-button:hover {
+            background-color: #ffda55;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .item-quantity {
+                margin-top: 10px;
+            }
+
+            .checkout-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .total-price, .checkout-button {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Shopping Cart</h1>
+        <nav>
+            <a href="header.html">Home</a>
+            <a href="tambah_produk.html">Products</a>
+            <a href="about us.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <div class="cart-container">
+        <h2 class="cart-title">Your Cart</h2>
+
+        <!-- Cart Items -->
+        <div class="cart-items">
+            <!-- Item 1 -->
+            <div class="cart-item">
+                <img src="jam.jpg" alt="Product Image">
+                <div class="item-details">
+                    <h3>Luxury Watch</h3>
+                    <p>$5000</p>
+                </div>
+                <div class="item-quantity">
+                    <button>-</button>
+                    <input type="number" value="1">
+                    <button>+</button>
+                </div>
+                <div class="item-total-price">$5000</div>
+                <button class="remove-button">Remove</button>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="cart-item">
+                <img src="shoes.jpg" alt="Product Image">
+                <div class="item-details">
+                    <h3>Luxury Shoes</h3>
+                    <p>$2000</p>
+                </div>
+                <div class="item-quantity">
+                    <button>-</button>
+                    <input type="number" value="2">
+                    <button>+</button>
+                </div>
+                <div class="item-total-price">$4000</div>
+                <button class="remove-button">Remove</button>
+            </div>
+        </div>
+
+        <!-- Checkout Section -->
+        <div class="checkout-section">
+            <div class="total-price">
+                Total: $9000
+            </div>
+            <button class="checkout-button" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Luxury Shop. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <!-- JavaScript for Checkout -->
+    <script>
+        function checkout() {
+            // Simulate login check or redirection to checkout page
+            let isLoggedIn = confirm("Are you logged in?");
+            
+            if (isLoggedIn) {
+                // If logged in, redirect to the checkout page
+                window.location.href = "checkout.html";
+            } else {
+                // If not logged in, alert the user
+                alert("Please login to proceed to checkout.");
+            }
+        }
+ 
+    <!-- Modal for login prompt -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <h2>Please Log In</h2>
+            <p>You need to log in before adding products to your cart.</p>
+            <button onclick="window.location.href='login.html'">Login</button>
+        </div>
+    </div>
+
+    <script>
+        // Simulasi login check
+        var isLoggedIn = false; // Set to true if user is logged in (guna PHP session nanti)
+
+        function addToCart() {
+            if (!isLoggedIn) {
+                // Tunjukkan modal login
+                document.getElementById('loginModal').style.display = 'flex';
+            } else {
+                // Jika login, hantar produk ke cart (gunakan form submit atau Ajax)
+                window.location.href = 'add_to_cart.php?product_id=1';
+            }
+        }
+
+        // Tutup modal jika klik luar modal
+        window.onclick = function(event) {
+            var modal = document.getElementById('loginModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

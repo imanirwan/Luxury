@@ -1,0 +1,239 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Shop</title>
+    <style>
+        /* Reset margin dan padding untuk seluruh halaman */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background dan font umum untuk keseluruhan website */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #111; /* Hitam elegan */
+            color: #fff; /* Putih untuk kontras */
+            line-height: 1.6;
+        }
+
+        /* Styling untuk header */
+        header {
+            background-color: #222; /* Warna gelap */
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #FFD700; /* Warna emas */
+            font-size: 36px;
+            letter-spacing: 3px;
+        }
+
+        header nav {
+            margin-top: 15px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #FFD700;
+        }
+
+        /* Styling untuk body section */
+        .hero {
+            background-image: url(bg.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 24px;
+            color: #FFD700;
+            margin-top: 20px;
+        }
+
+        .products {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .products h2 {
+            color: #FFD700;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product {
+            background-color: #222;
+            width: 300px;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            font-size: 24px;
+            color: #FFD700;
+            margin-top: 15px;
+        }
+
+        .product p {
+            font-size: 16px;
+            color: #bbb;
+            margin: 10px 0;
+        }
+
+        .product button {
+            background-color: #FFD700;
+            border: none;
+            color: #111;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .product button:hover {
+            background-color: #ffda55;
+        }
+
+        /* Styling untuk footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive untuk screen kecil (contoh: mobile) */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .product-grid {
+                flex-direction: column;
+            }
+
+            .product {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Luxury Shop</h1>
+        <nav>
+            <a href="header.html">Home</a>
+            <a href="tambah_produk.html">Products</a>
+            <a href="about us.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="checkout.html">Cart</a>
+            <a href="login.html">Log In</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section (Main Banner) -->
+    <section class="hero">
+        <div>
+            <h2>Exclusive Luxury Products</h2>
+            <p>Only the best for you</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <h2>Our Featured Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="jam.jpg" alt="Product 1">
+                <h3>Luxury Watch</h3>
+                <p>Price: $5000</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="beg.jpeg" alt="Product 2">
+                <h3>Designer Bag</h3>
+                <p>Price: $3000</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="shoes.jpg" alt="Product 3">
+                <h3>Exclusive Shoes</h3>
+                <p>Price: $1500</p>
+                <button onclick="main.html">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Luxury Shop. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+</body>
+</html>
